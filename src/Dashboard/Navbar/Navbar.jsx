@@ -2,7 +2,7 @@
 
 const Navbar = () => {
   return (
-    <div className="w-full h-20 bg-base-100 shadow-xl rounded-2xl mt-8 border-t border-gray-100 flex items-center justify-between">
+    <div className="w-full h-20 bg-base-100 shadow-xl rounded-2xl border-t border-gray-100 flex items-center justify-between">
       <div>
         <ul className="flex items-center gap-7 text-indigo-500 lg:ml-48">
           <li>My Project</li>

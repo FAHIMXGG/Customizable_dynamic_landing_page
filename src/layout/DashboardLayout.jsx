@@ -5,7 +5,7 @@ import Sidebar from "../Dashboard/Sidebar/Sidebar";
 
 const DashboardLayout = () => {
   return (
-    <div className="container mx-auto">
+    <div className="max-w-[2150px] mx-auto p-6">
       <Navbar />
       <Sidebar />
     </div>
