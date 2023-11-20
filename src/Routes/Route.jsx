@@ -1,10 +1,18 @@
+/** @format */
+
 import { createBrowserRouter } from "react-router-dom";
-import Test from "../Test/Test";
+import DashboardLayout from "../layout/DashboardLayout";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Test/>
-    }
+  {
+    path: "/",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "/",
+        element: "Dynamic Layout goes here",
+      },
+    ],
+  },
 ]);
 export default router;
