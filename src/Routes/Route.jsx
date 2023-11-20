@@ -2,6 +2,7 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../layout/DashboardLayout";
+import Test from "../Test/Test";
 
 const router = createBrowserRouter([
   {
@@ -14,5 +15,9 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path:'test',
+    element: <Test/>
+  }
 ]);
 export default router;
