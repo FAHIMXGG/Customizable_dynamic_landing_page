@@ -27,11 +27,11 @@ const Sidebar = () => {
             Header 4
           </button>
         </div>
-        <div className="w-full h-full mt-8 flex gap-12">
-          <div className=" border w-full">
+        <div className="w-full h-full mt-8 flex flex-col lg:flex-row gap-12">
+          <div className="w-full">
             <Outlet />
           </div>
-          <div className="w-[377px] h-[817px]">
+          <div className="max-w-[377px] h-[817px] overflow-hidden">
             <div className="h-20 bg-black bg-opacity-80 p-2 flex flex-col justify-between">
               <div className="flex items-center justify-between text-white">
                 <p>
@@ -52,7 +52,9 @@ const Sidebar = () => {
                 <FaSignOutAlt className="-rotate-90" />
               </div>
             </div>
-            <Outlet />
+            <div className="h-full">
+              <Outlet />
+            </div>
           </div>
         </div>
       </div>

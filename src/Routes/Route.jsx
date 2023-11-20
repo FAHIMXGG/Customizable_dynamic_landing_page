@@ -3,6 +3,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../layout/DashboardLayout";
 import Test from "../Test/Test";
+import HomeComponent from "../components/dashboard/HomeComponent";
 
 const router = createBrowserRouter([
   {
@@ -11,13 +12,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: "Dynamic Layout goes here",
+        element: <HomeComponent />,
       },
     ],
   },
   {
-    path:'test',
-    element: <Test/>
-  }
+    path: "test",
+    element: <Test />,
+  },
 ]);
 export default router;
