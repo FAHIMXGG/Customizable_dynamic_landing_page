@@ -17,6 +17,10 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: "/mobile",
+    element: <HomeComponent />,
+  },
+  {
     path: "test",
     element: <Test />,
   },
