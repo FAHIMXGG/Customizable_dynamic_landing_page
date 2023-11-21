@@ -37,7 +37,7 @@ const MobileView = () => {
           <FaSignOutAlt className="-rotate-90" />
         </div>
       </div>
-      <iframe src="/mobile" width={377} height={817} frameborder="0"></iframe>
+      <iframe src="/mobile" width={377} height={600} frameborder="0"></iframe>
     </div>
   );
 };
