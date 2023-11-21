@@ -10,6 +10,12 @@ const Test = () => {
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
+
+    const hoverTextStyle = {
+        cursor: 'pointer',
+        position: 'relative',
+    };
+
     const hoverWindowStyle = {
         display: 'block',
         position: 'absolute',
@@ -25,23 +31,26 @@ const Test = () => {
         opacity: isHovered ? 1 : 0,
         transition: 'opacity 0.3s ease-in-out',
     };
+
     return (
         <div className="flex items-center justify-center h-screen">
             <div
-                style={{ position: 'relative', padding: '20px', border: '1px solid #ccc', cursor: 'pointer' }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                style={{ position: 'relative', padding: '20px', border: '1px solid #ccc' }}
             >
-                Hover me!
+                <div
+                    style={hoverTextStyle}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    Hover me!
+                </div>
                 <div
                     className="inline-style-tailwind"
                     style={hoverWindowStyle}
                 >
-                    <div className=''>
-                        <div>
-                            <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, vel?</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vero deserunt voluptate autem vel ipsum minima eum, veniam dolor harum!</p>
-                        </div>
+                    <div>
+                        <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic, vel?</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vero deserunt voluptate autem vel ipsum minima eum, veniam dolor harum!</p>
                     </div>
                 </div>
             </div>
