@@ -6,9 +6,10 @@ import girl from "../../assets/girl.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 
-const HomeComponent = () => {
+const HomeComponent = ({hover}) => {
   return (
     <div className="lg:px-36 px-4 bg-[#EBF8FB] h-full">
+      {hover}
       <Navbar />
       <div className="flex flex-col-reverse lg:flex-row gap-10 items-center">
         <div className="flex-1 space-y-2">

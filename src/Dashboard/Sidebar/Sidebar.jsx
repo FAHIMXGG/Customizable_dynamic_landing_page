@@ -7,7 +7,7 @@ import { useState } from "react";
 import HomeComponent from "../../components/dashboard/HomeComponent";
 
 const Sidebar = () => {
-  //const [hover, setHover] = useState({})
+  const [hover, setHover] = useState()
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -46,7 +46,7 @@ const Sidebar = () => {
   }
 
   const handleHover = (header) => {
-
+    setHover(header)
   }
   //console.log(hover)
 
@@ -73,9 +73,10 @@ const Sidebar = () => {
               className="inline-style-tailwind"
               style={hoverWindowStyle}
             >
+              <h1>{hover}</h1>
               <div className='flex gap-3'>
                 <div className='py-20 w-[1000px]'>
-                  <HomeComponent />
+                  <HomeComponent hover={hover} />
                 </div>
                 <div className='w-[380px] h-60'>
                   <MobileView />
