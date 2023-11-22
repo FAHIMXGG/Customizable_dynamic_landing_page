@@ -12,7 +12,7 @@ const HomeComponent = () => {
       <Navbar />
       <div className="flex flex-col-reverse lg:flex-row gap-10 items-center">
         <div className="flex-1 space-y-2">
-          <h2 className="text-6xl font-bold">
+          <h2 className="text-5xl font-bold ">
             The modern way to build for the web
           </h2>
           <p className="text-gray-500">

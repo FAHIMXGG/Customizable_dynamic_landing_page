@@ -4,7 +4,7 @@ import HomeComponent from '../components/dashboard/HomeComponent';
 import MobileView from '../Dashboard/Sidebar/MobileView';
 
 const Test = () => {
-    const [isHovered, setIsHovered] = useState(false);
+    const [isHovered, setIsHovered] = useState(true);
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -52,7 +52,7 @@ const Test = () => {
                     className="inline-style-tailwind"
                     style={hoverWindowStyle}
                 >
-                    <div className='flex gap-5'>
+                    <div className='flex gap-3'>
                         <div className='py-20 w-[1000px]'>
                             <HomeComponent />
                         </div>
