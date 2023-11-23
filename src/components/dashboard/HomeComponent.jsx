@@ -1,9 +1,29 @@
 import Cover1 from "./Cover/Cover1";
+import Cover2 from "./Cover/Cover2";
+import Cover3 from "./Cover/Cover3";
+import Cover5 from "./Cover/Cover5";
 
-const HomeComponent = ({ hover }) => {
+const HomeComponent = ({ click }) => {
   return (
     <>
-      <Cover1/>
+      {
+                click === 1  ? (
+                    <Cover1/>
+                ) 
+                : click === 2  ? (
+                    <Cover2/>
+                )
+                : click === 3  ? (
+                    <Cover3/>
+                )
+                : click === 4  ? (
+                    <Cover5/>
+                )
+                : click === 5  ? (
+                    <Cover5/>
+                )
+                 : (<Cover1/>)
+            }
       {/* <div className="lg:px-36 px-4 bg-[#EBF8FB] h-full">
 
         <Navbar />

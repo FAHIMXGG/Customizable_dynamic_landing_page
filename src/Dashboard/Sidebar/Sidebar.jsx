@@ -5,9 +5,11 @@ import SidebarMenu from "./SidebarMenu";
 import MobileView from "./MobileView";
 import { useState } from "react";
 import Cover from "../../components/dashboard/Cover/Cover";
+import HomeComponent from "../../components/dashboard/HomeComponent";
 
 const Sidebar = () => {
   const [hover, setHover] = useState()
+  const [click , setClick] = useState()
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -50,6 +52,12 @@ const Sidebar = () => {
   }
   //console.log(hover)
 
+  const handleClick = (header) => {
+    setClick(header)
+  }
+
+  //console.log(click)
+
   return (
     <div className="mt-10 flex gap-8">
       <SidebarMenu />
@@ -62,9 +70,11 @@ const Sidebar = () => {
                 key={header}
                 className="border-2 rounded px-2 text-gray-600"
                 onMouseOver={() => { handleHover(header) }}
+                onClick={() => { handleClick(header) } }
                 style={hoverTextStyle}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+
               >
                 Header {header}
               </button>
@@ -88,7 +98,7 @@ const Sidebar = () => {
         </div>
         <div className="w-full h-full mt-8 flex flex-col lg:flex-row gap-12">
           <div className="w-full">
-            <Outlet />
+            <HomeComponent click={click}/>
           </div>
           <MobileView />
         </div>
