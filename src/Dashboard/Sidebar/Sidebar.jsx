@@ -19,14 +19,14 @@ const Sidebar = () => {
 
   const decreaseClick = () => {
     setClick((prevClick) => {
-      setIsActive(prevClick - 1);
+      setIsActive((prevValue) => (prevValue > 1 ? prevClick - 1 : prevValue));
       return prevClick > 1 ? prevClick - 1 : prevClick;
     });
   };
 
   const increaseClick = () => {
     setClick((prevClick) => {
-      setIsActive(prevClick + 1);
+      setIsActive((prevValue) => (prevValue < 9 ? prevClick + 1 : prevValue));
       return prevClick < 9 ? prevClick + 1 : prevClick;
     });
   };
