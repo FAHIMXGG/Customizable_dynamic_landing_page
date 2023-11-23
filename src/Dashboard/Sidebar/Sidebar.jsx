@@ -47,7 +47,7 @@ const Sidebar = () => {
     padding: "10px",
     border: "1px solid #ccc",
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-    zIndex: 1,
+    zIndex: 50,
     width: "1400px",
     height: "704px",
     opacity: isHovered ? 1 : 0,
@@ -76,7 +76,7 @@ const Sidebar = () => {
       <div className="flex-1 ">
         <div className="flex items-center justify-center">
           <div
-            className="w-max flex items-center gap-6 h-fit lg:ml-7"
+            className="w-full flex items-center gap-6 h-fit lg:ml-7"
             style={{ position: "relative" }}
           >
             {headers.map((header) => (
@@ -98,10 +98,10 @@ const Sidebar = () => {
             ))}
             <div className="inline-style-tailwind" style={hoverWindowStyle}>
               <div className="flex gap-3">
-                <div className="py-20 w-[1000px]">
+                <div className="h-full w-[1000px]">
                   <Cover hover={hover} />
                 </div>
-                <div className="w-[380px] h-60">
+                <div className="w-[380px] h-full">
                   <MobileView hover={hover} />
                 </div>
               </div>
