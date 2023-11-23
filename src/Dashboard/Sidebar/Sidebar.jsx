@@ -15,13 +15,20 @@ const Sidebar = () => {
   const [hover, setHover] = useState();
   const [click, setClick] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
+  const [isActive, setIsActive] = useState(1);
 
   const decreaseClick = () => {
-    setClick((prevClick) => (prevClick > 1 ? prevClick - 1 : prevClick));
+    setClick((prevClick) => {
+      setIsActive(prevClick - 1);
+      return prevClick > 1 ? prevClick - 1 : prevClick;
+    });
   };
 
   const increaseClick = () => {
-    setClick((prevClick) => (prevClick < 9 ? prevClick + 1 : prevClick));
+    setClick((prevClick) => {
+      setIsActive(prevClick + 1);
+      return prevClick < 9 ? prevClick + 1 : prevClick;
+    });
   };
 
   const handleMouseEnter = () => {
@@ -66,6 +73,7 @@ const Sidebar = () => {
 
   const handleClick = (header) => {
     setClick(header);
+    setIsActive(header);
   };
 
   //console.log(click)
@@ -79,7 +87,11 @@ const Sidebar = () => {
             {headers.map((header) => (
               <button
                 key={header}
-                className="border-2 rounded px-2 text-gray-600"
+                className={`border-2 rounded-md px-2 hover:bg-yellow-500 hover:text-black transition-all duration-300 ${
+                  header === isActive
+                    ? "bg-yellow-500 text-black"
+                    : "text-gray-600 "
+                }`}
                 onMouseOver={() => {
                   handleHover(header);
                 }}
