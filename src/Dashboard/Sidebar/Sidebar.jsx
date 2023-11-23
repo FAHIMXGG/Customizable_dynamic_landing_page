@@ -6,11 +6,21 @@ import MobileView from "./MobileView";
 import { useState } from "react";
 import Cover from "../../components/dashboard/Cover/Cover";
 import HomeComponent from "../../components/dashboard/HomeComponent";
+import { IoArrowForwardCircleOutline, IoArrowBackCircleOutline } from "react-icons/io5";
 
 const Sidebar = () => {
   const [hover, setHover] = useState()
-  const [click , setClick] = useState()
+  const [click, setClick] = useState(1)
   const [isHovered, setIsHovered] = useState(false);
+
+
+  const decreaseClick = () => {
+    setClick((prevClick) => (prevClick > 1 ? prevClick - 1 : prevClick));
+  };
+  
+  const increaseClick = () => {
+    setClick((prevClick) => (prevClick < 9 ? prevClick + 1 : prevClick));
+  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -70,7 +80,7 @@ const Sidebar = () => {
                 key={header}
                 className="border-2 rounded px-2 text-gray-600"
                 onMouseOver={() => { handleHover(header) }}
-                onClick={() => { handleClick(header) } }
+                onClick={() => { handleClick(header) }}
                 style={hoverTextStyle}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -83,7 +93,7 @@ const Sidebar = () => {
               className="inline-style-tailwind"
               style={hoverWindowStyle}
             >
-              
+
               <div className='flex gap-3'>
                 <div className='py-20 w-[1000px]'>
                   <Cover hover={hover} />
@@ -96,11 +106,17 @@ const Sidebar = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-full mt-8 flex flex-col lg:flex-row gap-12">
-          <div className="w-full">
-            <HomeComponent click={click}/>
+        <div className="flex gap-2">
+          <button onClick={decreaseClick}><IoArrowBackCircleOutline /></button>
+          <div className="w-full h-full mt-8 flex flex-col lg:flex-row gap-5">
+            <div className="w-full">
+              <HomeComponent click={click} />
+            </div>
+            <MobileView />
           </div>
-          <MobileView />
+          <button
+            onClick={increaseClick}
+          ><IoArrowForwardCircleOutline /></button>
         </div>
       </div>
     </div>
