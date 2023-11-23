@@ -5,9 +5,9 @@ import { FaShoppingCart } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 import Navbar1 from "../Navbar/Navbar1";
 
-const Cover1 = () => {
+const Cover8 = () => {
   return (
-    <div className="lg:px-36 px-4 bg-[#EBF8FB] h-full">
+    <div className="lg:px-36 px-4 bg-[#ebfbec] h-full">
       
       <Navbar1 />
       <div className="flex flex-col-reverse lg:flex-row gap-10 items-center">
@@ -55,4 +55,4 @@ const Cover1 = () => {
   );
 };
 
-export default Cover1;
+export default Cover8;
