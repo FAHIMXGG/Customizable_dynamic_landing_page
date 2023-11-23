@@ -75,10 +75,7 @@ const Sidebar = () => {
       <SidebarMenu />
       <div className="flex-1 ">
         <div className="flex items-center justify-center">
-          <div
-            className="w-full flex items-center gap-6 h-fit lg:ml-7"
-            style={{ position: "relative" }}
-          >
+          <div className="w-full flex items-center gap-6 h-fit lg:ml-7 relative">
             {headers.map((header) => (
               <button
                 key={header}
@@ -97,7 +94,7 @@ const Sidebar = () => {
               </button>
             ))}
             <div className="inline-style-tailwind" style={hoverWindowStyle}>
-              <div className="flex gap-3">
+              <div className="flex items-center gap-3">
                 <div className="h-full w-[1000px]">
                   <Cover hover={hover} />
                 </div>

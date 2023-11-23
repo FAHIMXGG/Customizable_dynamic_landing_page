@@ -14,7 +14,7 @@ const EmbeddedComponent = () => {
   );
 };
 
-const MobileView = ({hover}) => {
+const MobileView = ({ hover }) => {
   return (
     <div className="hidden lg:block">
       <div className="h-20 bg-black bg-opacity-80 p-2 flex flex-col justify-between">
@@ -37,7 +37,11 @@ const MobileView = ({hover}) => {
           <FaSignOutAlt className="-rotate-90" />
         </div>
       </div>
-      <iframe src="/mobile" width={377} height={600} frameborder="0"></iframe>
+      <iframe
+        src={`${location.origin}/mobile`}
+        width={377}
+        height={600}
+      ></iframe>
     </div>
   );
 };
