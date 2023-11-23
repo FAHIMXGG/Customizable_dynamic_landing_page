@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import SidebarMenu from "./SidebarMenu";
 import MobileView from "./MobileView";
 import { useState } from "react";
-import HomeComponent from "../../components/dashboard/HomeComponent";
+import Cover from "../../components/dashboard/Cover/Cover";
 
 const Sidebar = () => {
   const [hover, setHover] = useState()
@@ -73,10 +73,10 @@ const Sidebar = () => {
               className="inline-style-tailwind"
               style={hoverWindowStyle}
             >
-              <h1>{hover}</h1>
+              
               <div className='flex gap-3'>
                 <div className='py-20 w-[1000px]'>
-                  <HomeComponent hover={hover} />
+                  <Cover hover={hover} />
                 </div>
                 <div className='w-[380px] h-60'>
                   <MobileView />
