@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import DashboardLayout from "../layout/DashboardLayout";
 import Test from "../Test/Test";
 import HomeComponent from "../components/dashboard/HomeComponent";
+import Cover from "../components/dashboard/Cover/Cover";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/mobile",
-    element: <HomeComponent />,
+    element: <Cover />,
   },
   {
     path: "test",

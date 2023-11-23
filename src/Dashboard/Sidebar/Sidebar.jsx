@@ -79,7 +79,7 @@ const Sidebar = () => {
                   <Cover hover={hover} />
                 </div>
                 <div className='w-[380px] h-60'>
-                  <MobileView />
+                  <MobileView hover={hover} />
                 </div>
               </div>
 

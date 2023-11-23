@@ -14,7 +14,7 @@ const EmbeddedComponent = () => {
   );
 };
 
-const MobileView = () => {
+const MobileView = ({hover}) => {
   return (
     <div className="hidden lg:block">
       <div className="h-20 bg-black bg-opacity-80 p-2 flex flex-col justify-between">
