@@ -9,8 +9,9 @@ import Cover7 from './cover7';
 import Cover8 from './cover8';
 import Cover9 from './cover9';
 
-const Cover = ({hover}) => {
-    console.log(hover)
+const Cover = ({hover = 1}) => {
+    console.log('hover',hover)
+    //const hover = 2
     return (
         <div>
             {
@@ -41,7 +42,7 @@ const Cover = ({hover}) => {
                 : hover === 9  ? (
                     <Cover9/>
                 )
-                 : (<Cover1/>)
+                 : (<>gg</>)
             }
             
         </div>

@@ -11,37 +11,34 @@ import Cover9 from "./Cover/cover9";
 
 const HomeComponent = ({ click }) => {
 
-  const action = click;
-  console.log("action",action)
-
   return (
     <>
       {
-                action === 1  ? (
+                click === 1  ? (
                     <Cover1/>
                 ) 
-                : action === 2  ? (
+                : click === 2  ? (
                     <Cover2/>
                 )
-                : action === 3  ? (
+                : click === 3  ? (
                     <Cover3/>
                 )
-                : action === 4  ? (
+                : click === 4  ? (
                     <Cover4/>
                 )
-                : action === 5  ? (
+                : click === 5  ? (
                     <Cover5/>
                 )
-                : action === 6  ? (
+                : click === 6  ? (
                     <Cover6/>
                 )
-                : action === 7  ? (
+                : click === 7  ? (
                     <Cover7/>
                 )
-                : action === 8  ? (
+                : click === 8  ? (
                     <Cover8/>
                 )
-                : action === 9  ? (
+                : click === 9  ? (
                     <Cover9/>
                 )
                  : (<Cover1/>)

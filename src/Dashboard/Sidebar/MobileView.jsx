@@ -5,6 +5,7 @@ import {
   MdOutlineSignalCellularAlt,
 } from "react-icons/md";
 import { FaLock, FaSignOutAlt } from "react-icons/fa";
+import Cover1 from "../../components/dashboard/Cover/Cover1";
 
 const EmbeddedComponent = () => {
   return (
@@ -38,10 +39,10 @@ const MobileView = ({ hover }) => {
         </div>
       </div>
       <iframe
-        src={`${location.origin}/mobile`}
+        srcdoc="<Cover/>"
         width={377}
         height={600}
-      ></iframe>
+      ><Cover1/></iframe>
     </div>
   );
 };
