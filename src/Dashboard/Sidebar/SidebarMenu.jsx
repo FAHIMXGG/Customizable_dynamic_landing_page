@@ -1,5 +1,5 @@
 /** @format */
-
+import { FaArrowRight } from "react-icons/fa";
 const SidebarMenu = () => {
   return (
     <div className="w-40 h-full rounded-[20px] bg-base-100 sidebar p-5 space-y-4">
@@ -19,7 +19,9 @@ const SidebarMenu = () => {
           <li>
             <div className="flex items-center justify-between border-2 rounded px-2 -ml-2">
               <span>header</span>
-              <span>{"-->"}</span>
+              <span>
+                <FaArrowRight />
+              </span>
             </div>
           </li>
           <li>Footer</li>

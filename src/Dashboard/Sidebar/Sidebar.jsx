@@ -87,10 +87,10 @@ const Sidebar = () => {
             {headers.map((header) => (
               <button
                 key={header}
-                className={`border-2 rounded-md px-2 hover:bg-yellow-500 hover:text-black transition-all duration-300 ${
+                className={`rounded-md px-2 hover:bg-[#FFC700] hover:text-black transition-all duration-300 ${
                   header === isActive
-                    ? "bg-yellow-500 text-black"
-                    : "text-gray-600 "
+                    ? "bg-[#FFC700] text-black"
+                    : "text-gray-600 border-2"
                 }`}
                 onMouseOver={() => {
                   handleHover(header);
