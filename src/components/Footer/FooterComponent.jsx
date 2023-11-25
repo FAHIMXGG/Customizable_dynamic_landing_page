@@ -1,24 +1,15 @@
-import { useEffect, useState } from "react";
-import Cover1 from "./Cover/Cover1";
-import Cover2 from "./Cover/Cover2";
-import Cover3 from "./Cover/Cover3";
-import Cover5 from "./Cover/Cover5";
-import Cover4 from "./Cover/Cover4";
-import Cover6 from "./Cover/cover6";
-import Cover7 from "./Cover/cover7";
-import Cover8 from "./Cover/cover8";
-import Cover9 from "./Cover/cover9";
-import Cover from "./Cover/Cover";
-import MobileView from "../../Dashboard/Sidebar/MobileView";
-import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+import React, { useState } from 'react';
+import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from 'react-icons/io5';
+import MobileView from '../../Dashboard/Sidebar/MobileView';
+import Footer from './Components/Footer';
+import FooterHover from './Components/FooterHover';
 
-const HomeComponent = () => {
+const FooterComponent = () => {
+
     const [isActive, setIsActive] = useState(1);
     const [isHovered, setIsHovered] = useState(false);
     const [hover, setHover] = useState();
     const [click, setClick] = useState(1);
-
-
 
     const decreaseClick = () => {
         setClick((prevClick) => {
@@ -34,9 +25,9 @@ const HomeComponent = () => {
         });
     };
 
-    const headers = [];
+    const footers = [];
     for (let i = 1; i < 10; i++) {
-        headers.push(i);
+        footers.push(i);
     }
     const hoverTextStyle = {
         cursor: "pointer",
@@ -66,14 +57,13 @@ const HomeComponent = () => {
         transition: "opacity 0.3s ease-in-out",
     };
 
-    const handleHover = (header) => {
-        setHover(header);
+    const handleHover = (footer) => {
+        setHover(footer);
     };
-    //console.log(hover)
 
-    const handleClick = (header) => {
-        setClick(header);
-        setIsActive(header);
+    const handleClick = (footer) => {
+        setClick(footer);
+        setIsActive(footer);
     };
 
     return (
@@ -85,30 +75,30 @@ const HomeComponent = () => {
                 <div className="w-full">
                     <div className="flex items-center justify-center">
                         <div className="w-full flex items-center gap-6 h-fit lg:ml-7 relative mb-10">
-                            {headers.map((header) => (
+                            {footers.map((footer) => (
                                 <button
-                                    key={header}
-                                    className={`rounded-md px-2 hover:bg-[#FFC700] hover:text-black transition-all duration-300 ${header === isActive
+                                    key={footer}
+                                    className={`rounded-md px-2 hover:bg-[#FFC700] hover:text-black transition-all duration-300 ${footer === isActive
                                         ? "bg-[#FFC700] text-black"
                                         : "text-gray-600 border-2"
                                         }`}
                                     onMouseOver={() => {
-                                        handleHover(header);
+                                        handleHover(footer);
                                     }}
                                     onClick={() => {
-                                        handleClick(header);
+                                        handleClick(footer);
                                     }}
                                     style={hoverTextStyle}
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
                                 >
-                                    Header {header}
+                                    Footer {footer}
                                 </button>
                             ))}
                             <div className="inline-style-tailwind" style={hoverWindowStyle}>
                                 <div className="flex items-center gap-3">
-                                    <div className="h-full w-[1000px]">
-                                        <Cover hover={hover}></Cover>
+                                    <div className="h-full w-[1000px] ">
+                                        <FooterHover hover={hover} />
                                     </div>
                                     <div className="w-[380px] h-full mt-10">
                                         <MobileView hover={hover} />
@@ -117,39 +107,10 @@ const HomeComponent = () => {
                             </div>
                         </div>
                     </div>
-                    {
-                        click === 1 ? (
-                            <Cover1 />
-                        )
-                            : click === 2 ? (
-                                <Cover2 />
-                            )
-                                : click === 3 ? (
-                                    <Cover3 />
-                                )
-                                    : click === 4 ? (
-                                        <Cover4 />
-                                    )
-                                        : click === 5 ? (
-                                            <Cover5 />
-                                        )
-                                            : click === 6 ? (
-                                                <Cover6 />
-                                            )
-                                                : click === 7 ? (
-                                                    <Cover7 />
-                                                )
-                                                    : click === 8 ? (
-                                                        <Cover8 />
-                                                    )
-                                                        : click === 9 ? (
-                                                            <Cover9 />
-                                                        )
-                                                            : (<Cover1 />)
-                    }
+                    <Footer click={click}></Footer>
                 </div>
                 <div className=" mt-[68px]">
-                    <MobileView/>
+                    <MobileView />
                 </div>
             </div>
 
@@ -161,4 +122,4 @@ const HomeComponent = () => {
     );
 };
 
-export default HomeComponent;
+export default FooterComponent;
