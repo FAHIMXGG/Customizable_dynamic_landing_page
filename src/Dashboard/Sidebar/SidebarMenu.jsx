@@ -1,5 +1,6 @@
 /** @format */
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const SidebarMenu = () => {
   return (
     <div className="w-40 h-full rounded-[20px] bg-base-100 sidebar p-5 space-y-4">
@@ -18,13 +19,13 @@ const SidebarMenu = () => {
         <ul className="font-normal pl-2 text-gray-600">
           <li>
             <div className="flex items-center justify-between border-2 rounded px-2 -ml-2">
-              <span>header</span>
+              <span><Link to="/header">header</Link></span>
               <span>
                 <FaArrowRight />
               </span>
             </div>
           </li>
-          <li>Footer</li>
+          <li><Link to="/footer">Footer</Link></li>
           <li>Pricing</li>
           <li>Testimonial</li>
           <li>Blog</li>

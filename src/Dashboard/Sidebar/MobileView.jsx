@@ -39,10 +39,10 @@ const MobileView = ({ hover }) => {
         </div>
       </div>
       <iframe
-        srcdoc="<Cover/>"
+        src={`${location.origin}/mobile`}
         width={377}
         height={600}
-      ><Cover1/></iframe>
+      ></iframe>
     </div>
   );
 };
