@@ -1,6 +1,7 @@
 /** @format */
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ActiveLink from "../../components/dashboard/ActiveLink";
 const SidebarMenu = () => {
   return (
     <div className="w-40 h-full rounded-[20px] bg-base-100 sidebar p-5 space-y-4">
@@ -18,14 +19,17 @@ const SidebarMenu = () => {
         <h2>Component</h2>
         <ul className="font-normal pl-2 text-gray-600">
           <li>
-            <div className="flex items-center justify-between border-2 rounded px-2 -ml-2">
+            {/* <div className="flex items-center justify-between border-2 rounded px-2 -ml-2">
               <span><Link to="/header">header</Link></span>
               <span>
                 <FaArrowRight />
               </span>
-            </div>
+            </div> */}
+            <ActiveLink to={"/header"}>Header</ActiveLink>
           </li>
-          <li><Link to="/footer">Footer</Link></li>
+          <li>
+            <ActiveLink to="/footer">Footer</ActiveLink>
+          </li>
           <li>Pricing</li>
           <li>Testimonial</li>
           <li>Blog</li>
