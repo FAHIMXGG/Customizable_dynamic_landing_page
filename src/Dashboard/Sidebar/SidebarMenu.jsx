@@ -19,12 +19,6 @@ const SidebarMenu = () => {
         <h2>Component</h2>
         <ul className="font-normal pl-2 text-gray-600">
           <li>
-            {/* <div className="flex items-center justify-between border-2 rounded px-2 -ml-2">
-              <span><Link to="/header">header</Link></span>
-              <span>
-                <FaArrowRight />
-              </span>
-            </div> */}
             <ActiveLink to={"/header"}>Header</ActiveLink>
           </li>
           <li>

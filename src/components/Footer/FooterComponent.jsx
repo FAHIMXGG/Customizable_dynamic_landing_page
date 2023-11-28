@@ -72,43 +72,49 @@ const FooterComponent = () => {
                 <IoArrowBackCircleOutline />
             </button>
             <div className="w-full h-full mt-8 flex flex-col lg:flex-row gap-5">
-                <div className="w-full">
-                    <div className="flex items-center justify-center">
-                        <div className="w-full flex items-center gap-6 h-fit lg:ml-7 relative mb-10">
-                            {footers.map((footer) => (
-                                <button
-                                    key={footer}
-                                    className={`rounded-md px-2 hover:bg-[#FFC700] hover:text-black transition-all duration-300 ${footer === isActive
-                                        ? "bg-[#FFC700] text-black"
-                                        : "text-gray-600 border-2"
-                                        }`}
-                                    onMouseOver={() => {
-                                        handleHover(footer);
-                                    }}
-                                    onClick={() => {
-                                        handleClick(footer);
-                                    }}
-                                    style={hoverTextStyle}
-                                    onMouseEnter={handleMouseEnter}
-                                    onMouseLeave={handleMouseLeave}
-                                >
-                                    Footer {footer}
-                                </button>
-                            ))}
-                            <div className="inline-style-tailwind" style={hoverWindowStyle}>
-                                <div className="flex items-center gap-3">
-                                    <div className="h-full w-[1000px] ">
-                                        <FooterHover hover={hover} />
-                                    </div>
-                                    <div className="w-[380px] h-full mt-10">
-                                        <MobileView hover={hover} />
+                <div className='w-full'>
+                    <div className="flex flex-col justify-center">
+                        <div className="flex items-center justify-center">
+                            <div className="w-full flex items-center gap-6 h-fit lg:ml-7 relative mb-10">
+                                {footers.map((footer) => (
+                                    <button
+                                        key={footer}
+                                        className={`rounded-md px-2 hover:bg-[#FFC700] hover:text-black transition-all duration-300 ${footer === isActive
+                                            ? "bg-[#FFC700] text-black"
+                                            : "text-gray-600 border-2"
+                                            }`}
+                                        onMouseOver={() => {
+                                            handleHover(footer);
+                                        }}
+                                        onClick={() => {
+                                            handleClick(footer);
+                                        }}
+                                        style={hoverTextStyle}
+                                        onMouseEnter={handleMouseEnter}
+                                        onMouseLeave={handleMouseLeave}
+                                    >
+                                        Footer {footer}
+                                    </button>
+                                ))}
+                                <div className="inline-style-tailwind" style={hoverWindowStyle}>
+                                    <div className="flex items-center gap-3">
+                                        <div className="h-full w-[1000px] ">
+                                            <FooterHover hover={hover} />
+                                        </div>
+                                        <div className="w-[380px] h-full mt-10">
+                                            <MobileView hover={hover} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    <Footer click={click}></Footer>
+                    <div className='lg:h-[600px] flex flex-col w-full justify-center'>
+                        <Footer click={click}></Footer>
+                    </div>
                 </div>
+
                 <div className=" mt-[68px]">
                     <MobileView />
                 </div>
