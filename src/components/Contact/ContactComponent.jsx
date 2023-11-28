@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from 'react-icons/io5';
 import MobileView from '../../Dashboard/Sidebar/MobileView';
 import Contact from './Components/Contact';
+import ContactHover from './Components/ContactHover';
 
 const ContactComponent = () => {
     const [isActive, setIsActive] = useState(1);
@@ -96,7 +97,7 @@ const ContactComponent = () => {
                                 <div className="inline-style-tailwind" style={hoverWindowStyle}>
                                     <div className="flex items-center gap-3">
                                         <div className="h-full w-[1000px] ">
-                                            <Contact hover={hover} />
+                                            <ContactHover hover={hover} />
                                         </div>
                                         <div className="w-[380px] h-full mt-10">
                                             <MobileView hover={hover} />
