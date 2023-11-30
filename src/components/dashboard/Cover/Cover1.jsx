@@ -1,3 +1,4 @@
+/** @format */
 
 import phone from "../../../assets/Phone Front 2.png";
 import girl from "../../../assets/girl.png";
@@ -8,12 +9,11 @@ import Navbar1 from "../Navbar/Navbar1";
 const Cover1 = () => {
   return (
     <div className="lg:px-36 px-4 bg-[#EBF8FB] h-full">
-      
       <Navbar1 />
       <div className="flex flex-col-reverse lg:flex-row gap-10 items-center">
         <div className="flex-1 space-y-2">
           <h2 className="text-5xl font-bold ">
-            The modern way to build for the web
+            The modern way to build for the web.
           </h2>
           <p className="text-gray-500">
             Dlex empowers designers to build professional, custom websites in a
