@@ -63,7 +63,7 @@ const ContactComponent = () => {
     const handleClick = (contact) => {
         setClick(contact);
         setIsActive(contact);
-    }; 2
+    };
     return (
         <> <div className="flex gap-2">
             <button onClick={decreaseClick}>

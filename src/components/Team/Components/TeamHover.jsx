@@ -1,16 +1,16 @@
 import React from 'react';
-import Blog1 from './Blog1';
-import Blog2 from './Blog2';
+import Team1 from './Team1';
+import Team2 from './Team2';
 
-const BlogHover = ({hover}) => {
+const TeamHover = ({hover}) => {
     return (
         <div>
             {
                 hover === 1 ? (
-                    <Blog1 />
+                    <Team1 />
                 )
                     : hover === 2 ? (
-                        <Blog2 />
+                        <Team2 />
                     )
                         : hover === 3 ? (
                             <Cover3 />
@@ -39,4 +39,4 @@ const BlogHover = ({hover}) => {
     );
 };
 
-export default BlogHover;
+export default TeamHover;
