@@ -11,3 +11,17 @@
 .active-arrow > span[class^="icon"] {
   display: none !important;
 }
+
+.img-zoom {
+  animation: zoom-in-out 5s infinite ease-in-out;
+}
+
+@keyframes zoom-in-out {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}

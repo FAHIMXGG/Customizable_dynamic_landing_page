@@ -16,7 +16,7 @@ const Navbar3 = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <>
-      <div className="w-full h-24 flex items-center gap-12 justify-between">
+      <div className="w-full h-24 flex items-center gap-12 justify-between text-white">
         <div>
           <img src={logo} alt="logo" className="w-60 object-cover" />
         </div>
