@@ -15,16 +15,16 @@ const Cover2 = () => {
             Dlex empowers designers to build professional, custom websites in a
             completely visual canvas with no code.
           </p>
-          <div className="flex items-center h-16 rounded-md overflow-hidden">
-            <div className="h-full">
+          <div className="grid grid-cols-3 h-16 rounded-md overflow-hidden">
+            <div className="col-span-2">
               <input
                 type="email"
                 placeholder="Email"
                 autoFocus={true}
-                className="h-full bg-[#ecc339] px-2 placeholder:text-gray-600 border-2 border-r-0 border-[#856e219f]"
+                className="h-full w-full bg-[#ecc339] px-2 placeholder:text-gray-600 border-2 border-r-0 border-[#856e219f]"
               />
             </div>
-            <button className="h-full w-full bg-slate-800 text-white cursor-pointer">
+            <button className="h-full w-full whitespace-nowrap px-3 bg-slate-800 text-white cursor-pointer">
               Get started
             </button>
           </div>

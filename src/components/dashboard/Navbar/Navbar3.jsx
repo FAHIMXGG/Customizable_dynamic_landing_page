@@ -12,7 +12,7 @@ const links = [
   { id: 4, title: "service", url: "/" },
   { id: 4, title: "page", url: "/" },
 ];
-const Navbar2 = () => {
+const Navbar3 = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <>
@@ -64,4 +64,4 @@ const Navbar2 = () => {
   );
 };
 
-export default Navbar2;
+export default Navbar3;
