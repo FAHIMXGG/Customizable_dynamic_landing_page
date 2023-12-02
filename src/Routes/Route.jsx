@@ -12,6 +12,7 @@ import TestimonialComponent from "../components/Testimonial/TestimonialComponent
 import ContactComponent from "../components/Contact/ContactComponent";
 import TeamComponent from "../components/Team/TeamComponent";
 import CTAComponent from "../CTA/CTAComponent";
+import TestHome from "../Test/testHome";
 
 const router = createBrowserRouter([
   {
@@ -60,5 +61,10 @@ const router = createBrowserRouter([
     path: "test",
     element: <Test />,
   },
+  ,
+  {
+    path: "testh",
+    element: <TestHome/>,
+  }
 ]);
 export default router;
