@@ -12,7 +12,7 @@ import TestimonialComponent from "../components/Testimonial/TestimonialComponent
 import ContactComponent from "../components/Contact/ContactComponent";
 import TeamComponent from "../components/Team/TeamComponent";
 import CTAComponent from "../CTA/CTAComponent";
-import TestHome from "../Test/testHome";
+import TestHome from "../Test/TestHome";
 
 const router = createBrowserRouter([
   {

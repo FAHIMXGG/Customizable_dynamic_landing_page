@@ -33,7 +33,7 @@ const Footer = ({footer}) => {
                 : footer === 9  ? (
                     <Cover9/>
                 )
-                 : (<>gg</>)
+                 : (<Footer1/>)
             }
         </div>
     );

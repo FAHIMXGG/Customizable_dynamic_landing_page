@@ -1,5 +1,7 @@
 import React from 'react';
 import Cover1 from './Cover/Cover1';
+import Cover3 from './Cover/Cover3';
+import Cover2 from './Cover/Cover2';
 
 const Header = ({header}) => {
     return (
