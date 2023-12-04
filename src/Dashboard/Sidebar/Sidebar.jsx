@@ -1,27 +1,25 @@
 /** @format */
 
+import { Outlet } from "react-router-dom";
 import SidebarMenu from "./SidebarMenu";
+import MobileView from "./MobileView";
+import { useState } from "react";
+import Cover from "../../components/dashboard/Cover/Cover";
+import HomeComponent from "../../components/dashboard/HomeComponent";
+import {
+  IoArrowForwardCircleOutline,
+  IoArrowBackCircleOutline,
+} from "react-icons/io5";
 
 const Sidebar = () => {
+
   return (
-    <div className="mt-10 flex gap-8">
+    <div className="flex gap-8 mt-5">
       <SidebarMenu />
-      <div className="flex-1">
-        <div className="w-max flex items-center gap-6 h-fit lg:ml-7">
-          <button className="border-2 rounded px-2 text-gray-600">
-            Header 1
-          </button>
-          <button className="border-2 rounded px-2 text-gray-600">
-            Header 2
-          </button>
-          <button className="border-2 rounded px-2 text-gray-600">
-            Header 3
-          </button>
-          <button className="border-2 rounded px-2 text-gray-600">
-            Header 4
-          </button>
+      <div className="flex-1 ">
+        <div >
+          <Outlet/>
         </div>
-        <div className="w-full h-full border mt-8"></div>
       </div>
     </div>
   );
