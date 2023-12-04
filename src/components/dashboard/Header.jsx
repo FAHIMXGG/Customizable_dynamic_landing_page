@@ -34,7 +34,7 @@ const Header = ({header}) => {
                                                     : header === 9 ? (
                                                         <Cover9 />
                                                     )
-                                                        : (<>gg</>)
+                                                        : (<Cover1 />)
                 }
         </div>
     );

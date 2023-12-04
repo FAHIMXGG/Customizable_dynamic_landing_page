@@ -63,7 +63,7 @@ const router = createBrowserRouter([
   },
   ,
   {
-    path: "testh",
+    path: "home",
     element: <TestHome/>,
   }
 ]);
