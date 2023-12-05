@@ -67,7 +67,6 @@ const ContactComponent = () => {
     };
     
     const handleUpdate = () =>{
-        // console.log(click)
         fetch('http://localhost:3000/headers/656d5cbf17fd01f5c69cbd3b', {
             method: 'PUT',
             headers: {
@@ -80,7 +79,7 @@ const ContactComponent = () => {
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: `Saved contact ${click}`,
+                        title: `Saved Contact ${click}`,
                         showConfirmButton: false,
                         timer: 1500
                     })

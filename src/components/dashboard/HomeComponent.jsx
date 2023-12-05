@@ -11,6 +11,7 @@ import Cover9 from "./Cover/cover9";
 import Cover from "./Cover/Cover";
 import MobileView from "../../Dashboard/Sidebar/MobileView";
 import { IoArrowBackCircleOutline, IoArrowForwardCircleOutline } from "react-icons/io5";
+import Swal from "sweetalert2";
 
 const HomeComponent = () => {
     const [isActive, setIsActive] = useState(1);
@@ -75,6 +76,32 @@ const HomeComponent = () => {
         setClick(header);
         setIsActive(header);
     };
+
+    const handleUpdate = () =>{
+        fetch('http://localhost:3000/headers/656d5cbf17fd01f5c69cbd3b', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ header: click }),
+        })
+            .then((response) => {
+                if (response.ok) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: `Saved Header ${click}`,
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                } else {
+                    console.error('Failed');
+                }
+            })
+            .catch((error) => {
+                console.error('Error', error);
+            });
+    }
 
     return (
         <> <div className="flex gap-2">
@@ -148,8 +175,9 @@ const HomeComponent = () => {
                                                             : (<Cover1 />)
                     }
                 </div>
-                <div className=" mt-[68px]">
-                    <MobileView/>
+                <div className=" flex flex-col items-end gap-5">
+                    <button onClick={() => handleUpdate()}  className='btn btn-warning btn-sm w-16'>Save</button>
+                    <MobileView />
                 </div>
             </div>
 
