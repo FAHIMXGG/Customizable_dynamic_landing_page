@@ -3,14 +3,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../../../assets/Logo.png";
-const links = [
-  { id: 1, title: "products", url: "/products" },
-  { id: 2, title: "features", url: "/features" },
-  { id: 3, title: "marketplace", url: "/marketplace" },
-  { id: 4, title: "company", url: "/company" },
-];
-const Navbar1 = () => {
+
+const Navbar1 = ({ logo, navigation = [] }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <>
@@ -19,9 +13,9 @@ const Navbar1 = () => {
           <img src={logo} alt="logo" className="w-60 object-cover" />
         </div>
         <div className="lg:flex hidden w-full gap-12 capitalize">
-          {links.map((link) => (
-            <Link key={link.id} to={link.url}>
-              {link.title}
+          {navigation.map((link) => (
+            <Link key={link} to={link}>
+              {link}
             </Link>
           ))}
         </div>
@@ -49,9 +43,9 @@ const Navbar1 = () => {
             isNavOpen ? "left-0 top-0 py-5" : "-left-[9999px] rounded-md"
           }`}
         >
-          {links.map((link) => (
-            <Link key={link.id} to={link.url} className="capitalize">
-              {link.title}
+          {navigation.map((link) => (
+            <Link key={link} to={link} className="capitalize">
+              {link}
             </Link>
           ))}
         </div>

@@ -5,20 +5,22 @@ import girl from "../../../assets/girl.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { BsThreeDots } from "react-icons/bs";
 import Navbar1 from "../Navbar/Navbar1";
+import { useState } from "react";
+import getHeaderData from "../../../utils/getHeaderData";
 
 const Cover1 = () => {
+  const [isEditable, setIsEditable] = useState(false);
+
+  const { header, isLoading, refetch } = getHeaderData(1);
+  const { banner_title, logo, banner_des, banner_img, navigation } = header;
+
   return (
     <div className="lg:px-36 px-4 bg-[#EBF8FB] h-full">
-      <Navbar1 />
+      <Navbar1 logo={logo} navigation={navigation} />
       <div className="flex flex-col-reverse lg:flex-row gap-10 items-center">
         <div className="flex-1 space-y-2">
-          <h2 className="text-5xl font-bold ">
-            The modern way to build for the web.
-          </h2>
-          <p className="text-gray-500">
-            Dlex empowers designers to build professional, custom websites in a
-            completely visual canvas with no code.
-          </p>
+          <h2 className="text-5xl font-bold">{banner_title}</h2>
+          <p className="text-gray-500">{banner_des}</p>
           <div className="flex items-center gap-6">
             <button className="rounded-md text-white border py-2 px-4 bg-blue-800">
               Get Started
@@ -29,26 +31,7 @@ const Cover1 = () => {
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex items-center">
-            <div className="h-[84px] w-[196px] rounded-xl bg-slate-50 shadow-xl -mr-20 -mb-40 z-20 p-4 flex gap-2">
-              <span className="overflow-hidden rounded-full w-16 h-8 bg-fuchsia-200 flex items-center justify-center">
-                <FaShoppingCart className="text-fuchsia-600" />
-              </span>
-              <div>
-                <h3 className="text-xs font-bold">
-                  34 item has been added to a cart.
-                </h3>
-                <p className="text-gray-500 text-xs">30m ago</p>
-              </div>
-              <BsThreeDots className="text-xl" />
-            </div>
-            <div className="z-10">
-              <img src={phone} alt="phone" />
-            </div>
-            <div className="-ml-6 -mt-44">
-              <img src={girl} alt="girl" />
-            </div>
-          </div>
+          <img src={banner_img} alt="img" className="lg:scale-110 lg:mt-10" />
         </div>
       </div>
     </div>

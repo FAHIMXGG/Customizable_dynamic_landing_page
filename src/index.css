@@ -25,3 +25,7 @@
     transform: scale(1.2);
   }
 }
+
+button {
+  white-space: nowrap !important;
+}
