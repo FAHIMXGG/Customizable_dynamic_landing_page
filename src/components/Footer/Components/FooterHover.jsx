@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer1 from './Footer1';
 import Footer2 from './Footer2';
+import Footer3 from './Footer3';
 
 const FooterHover = ({hover}) => {
     return (
@@ -13,7 +14,7 @@ const FooterHover = ({hover}) => {
                     <Footer2/>
                 )
                 : hover === 3  ? (
-                    <Cover3/>
+                    <Footer3/>
                 )
                 : hover === 4  ? (
                     <Cover4/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer1 from './Footer1';
 import Footer2 from './Footer2';
+import Footer3 from './Footer3';
 
 const Footer = ({click}) => {
     return (
@@ -13,7 +14,7 @@ const Footer = ({click}) => {
                     <Footer2/>
                 )
                 : click === 3  ? (
-                    <Cover3/>
+                    <Footer3/>
                 )
                 : click === 4  ? (
                     <Cover4/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer1 from './Components/Footer1';
 import Footer2 from './Components/Footer2';
+import Footer3 from './Components/Footer3';
 
 const Footer = ({footer}) => {
     return (
@@ -13,7 +14,7 @@ const Footer = ({footer}) => {
                     <Footer2/>
                 )
                 : footer === 3  ? (
-                    <Cover3/>
+                    <Footer3/>
                 )
                 : footer === 4  ? (
                     <Cover4/>
