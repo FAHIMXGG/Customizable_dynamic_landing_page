@@ -12,7 +12,7 @@ const getHeaderData = (headerNumber) => {
     enabled: !!headerNumber,
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:3000/header_compo?header=${headerNumber}`
+        `https://dynamic-landing-page-server.vercel.app/header_compo?header=${headerNumber}`
       );
 
       return res.json();

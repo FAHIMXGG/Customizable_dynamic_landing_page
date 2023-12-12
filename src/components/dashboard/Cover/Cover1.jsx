@@ -1,9 +1,5 @@
 /** @format */
 
-import phone from "../../../assets/Phone Front 2.png";
-import girl from "../../../assets/girl.png";
-import { FaShoppingCart } from "react-icons/fa";
-import { BsThreeDots } from "react-icons/bs";
 import Navbar1 from "../Navbar/Navbar1";
 import { useState } from "react";
 import getHeaderData from "../../../utils/getHeaderData";
